@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: 0;
+}
+
+.navbar-brand img {
+    height: 65px;
+    width: 65px;
+}
+
+.nav-item a {
+    color: #fff;
+    /* font-weight: bolder;
+    background: rgb(68, 126, 184);
+    margin: 1em;
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-align: center; */
+
+    margin: 1em;
+}
+
+#navbarText {
+    position: absolute;
+    float: right;
+    right: 10px;
+}
+
+@media(max-width:768px) {
+    #navbarText {
+        position: relative;
+        left: 0em;
+    }
+}
+
+/* image scroll */
+
+/* Image scroll section styles */
+
+.image-scroll {
+    overflow: hidden;
+    /* Important for auto scroll */
+    position: relative;
+    /* Needed for child element positioning */
+    z-index: -10;
+    /* Adjust image container height as needed */
+}
+
+.image-container {
+    display: flex;
+    animation: image-scroll 20s infinite linear;
+    z-index: 0;
+    /* Animation for scrolling */
+}
+
+@keyframes image-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+    /* Adjust scroll distance based on image width */
+}
+
+.image-container img {
+    width: 30%;
+    /* Images should fill the container width */
+    object-fit: fill;
+}
